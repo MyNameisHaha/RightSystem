@@ -1,0 +1,10 @@
+<link rel="stylesheet" href="PageStyle.css" type="text/css">
+<link rel="stylesheet" href="PageLeftStyle.css" type="text/css">
+ 
+PageLeftStyle.css
+提示信息： .messageStyle { font-family: 宋体; font-size: 9pt; color: #FF0000 }
+ 
+PageStyle.css
+提示信息： .messageStyle { font-family: 宋体; font-size: 9pt; color: #FF0000 }
+详细信息： .userdifineth { font-family: 宋体; font-size: 9pt; background-color: #B5CFAD }
+ 
