@@ -77,9 +77,9 @@
   String sql="select function_name from d_function where function_id="+id;
   exeQueryResult e = new exeQueryResult();
   String functionname[][]=e.getSelectResultWithStringArray(sql);
-  sql="select manager_id,manager_name from d_manager where org_id ="+userDep+" and manager_id not in(select d_manager.manager_id from d_manager,D_R_FUN_MANAGER where d_manager.manager_id=D_R_FUN_MANAGER.manager_id and function_id="+id+" and org_id="+userDep+")";
+  sql="select manager_id,manager_name from d_manager where org_id >"+userDep+" and manager_id not in(select d_manager.manager_id from d_manager,D_R_FUN_MANAGER where d_manager.manager_id=D_R_FUN_MANAGER.manager_id and function_id="+id+" and org_id>"+userDep+")";
   String noFunManager[][]=e.getSelectResultWithStringArray(sql);
-  sql="select d_manager.manager_id,manager_name from d_manager,D_R_FUN_MANAGER where d_manager.manager_id=D_R_FUN_MANAGER.manager_id and function_id="+id+" and org_id="+userDep;
+  sql="select d_manager.manager_id,manager_name from d_manager,D_R_FUN_MANAGER where d_manager.manager_id=D_R_FUN_MANAGER.manager_id and function_id="+id+" and org_id!="+userDep;
   String haveFunManager[][]=e.getSelectResultWithStringArray(sql);
   String[] beginRight = null;
   if(haveFunManager!=null)
